@@ -1,0 +1,18 @@
+server:
+  port: 5000
+
+---
+spring:
+  config:
+    activate:
+      on-profiles: prod
+server:
+  port: 7070
+
+---
+spring:
+  config:
+    activate:
+      on-profiles: test
+server:
+  port: 4000

@@ -1,0 +1,20 @@
+package com.example.exercise19.Controller;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Random;
+
+@RestController
+public class SumController {
+
+    @GetMapping("/sum")
+    public int getSum() {
+        Random random = new Random();
+        int num1 = random.nextInt(100);
+        int num2 = random.nextInt(100);
+        return num1 + num2;
+    }
+}
